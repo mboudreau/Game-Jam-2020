@@ -24,7 +24,7 @@
     "build": "npm-run-all -p lint build:prod",
     "build:dev": "webpack --mode development",
     "build:prod": "webpack --mode production",
-    "lint": "tslint",
+    "lint": "tslint --project .",
     "start": "npm run watch:dev"
   },
   "repository": {

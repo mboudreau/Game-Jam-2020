@@ -6,32 +6,33 @@
  */
 
 export class Bullet extends Phaser.GameObjects.Image {
-  private bulletSpeed: number;
+    private bulletSpeed: number;
 
-  constructor(params) {
-    super(params.scene, params.x, params.y, params.key);
+    constructor(params) {
+        super(params.scene, params.x, params.y, params.key);
 
-    this.rotation = params.rotation;
-    this.initImage();
-    this.scene.add.existing(this);
-  }
+        this.rotation = params.rotation;
+        this.initImage();
+        this.scene.add.existing(this);
+    }
 
-  private initImage(): void {
-    // variables
-    this.bulletSpeed = 1000;
+    update(): void {
+    }
 
-    // image
-    this.setOrigin(0.5, 0.5);
-    this.setDepth(2);
+    private initImage(): void {
+        // variables
+        this.bulletSpeed = 1000;
 
-    // physics
-    this.scene.physics.world.enable(this);
-    this.scene.physics.velocityFromRotation(
-      this.rotation - Math.PI / 2,
-      this.bulletSpeed,
-      this.body.velocity
-    );
-  }
+        // image
+        this.setOrigin(0.5, 0.5);
+        this.setDepth(2);
 
-  update(): void {}
+        // physics
+        this.scene.physics.world.enable(this);
+        this.scene.physics.velocityFromRotation(
+            this.rotation - Math.PI / 2,
+            this.bulletSpeed,
+            this.body.velocity
+        );
+    }
 }

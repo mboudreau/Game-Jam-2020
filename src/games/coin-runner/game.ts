@@ -6,30 +6,30 @@
  */
 
 import "phaser";
-import { GameScene } from "./scenes/game-scene";
+import {GameScene} from "./scenes/game-scene";
 
 const config: Phaser.Types.Core.GameConfig = {
-  title: "Coin Runner",
-  url: "https://github.com/digitsensitive/phaser3-typescript",
-  version: "1.1.1",
-  width: 768,
-  height: 576,
-  type: Phaser.AUTO,
-  parent: "game",
-  scene: [GameScene],
-  input: {
-    keyboard: true
-  },
-  backgroundColor: "#3A99D9",
-  render: { pixelArt: false, antialias: false }
+    title: "Coin Runner",
+    url: "https://github.com/digitsensitive/phaser3-typescript",
+    version: "1.1.1",
+    width: 768,
+    height: 576,
+    type: Phaser.AUTO,
+    parent: "game",
+    scene: [GameScene],
+    input: {
+        keyboard: true
+    },
+    backgroundColor: "#3A99D9",
+    render: {pixelArt: false, antialias: false}
 };
 
 export class Game extends Phaser.Game {
-  constructor(config: Phaser.Types.Core.GameConfig) {
-    super(config);
-  }
+    constructor(config: Phaser.Types.Core.GameConfig) {
+        super(config);
+    }
 }
 
 window.addEventListener("load", () => {
-  var game = new Game(config);
+    var game = new Game(config);
 });
