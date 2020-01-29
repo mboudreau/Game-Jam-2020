@@ -1,0 +1,33 @@
+{
+	"extends": [
+		"tslint:recommended"
+	],
+	"rules": {
+		"interface-name": false,
+		"no-submodule-imports": false,
+		"no-console": false,
+		"no-implicit-dependencies": false,
+		"no-unused": true,
+		"no-unused-expression": false,
+		"no-var-before-return": true,
+		"no-else-after-return": true,
+		"template-no-call-expression": true,
+		"prefer-conditional-expression": true,
+		"prefer-on-push-component-change-detection": true,
+
+		"member-ordering": [
+			true,
+			{
+				"order": [
+					"public-instance-field",
+					"protected-instance-field",
+					"private-instance-field",
+					"constructor",
+					"public-instance-method",
+					"protected-instance-method",
+					"private-instance-method"
+				]
+			}
+		]
+	},
+}
